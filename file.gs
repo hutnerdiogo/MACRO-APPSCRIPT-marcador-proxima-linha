@@ -1,10 +1,10 @@
 function onEdit(e) {
   var sheet = e.source.getActiveSheet();
   var range = e.range;
+
+  var column = 4 // A = 1, B = 2, D = 4, etc
   
-  // Verifica se a coluna editada é a coluna "D" (coluna 4)
-  if (range.getColumn() == 4) {
-    // Obtém a linha atual e a próxima linha
+  if (range.getColumn() === column) {
     var currentRow = range.getRow();
     var nextRow = currentRow + 1;
     
